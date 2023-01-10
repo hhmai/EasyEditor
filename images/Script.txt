@@ -1,0 +1,6 @@
+load images/cat.jpg cat
+flipHorizontal cat catflip
+blur catflip catflipblur
+sepia catflipblur catflipblursepia
+save images/ScriptTest.png catflipblursepia
+q
