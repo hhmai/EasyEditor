@@ -1,0 +1,78 @@
+List of supported commands: 
+
+# must use load first before using any other commands
+
+load image-path image-name: Load an image from the specified path and refer it to henceforth in the program by the given image name.
+
+save image-path image-name: Save the image with the given name to the specified path which should include the name of the file.
+
+red-component image-name dest-image-name: Create a greyscale image with the red-component of the image with the given name, and refer to it henceforth 
+                                          in the program by the given destination name. 
+
+green-component image-name dest-image-name: Create a green image with the red-component of the image with the given name, and refer to it henceforth 
+                                          in the program by the given destination name. 
+
+blue-component image-name dest-image-name: Create a blue image with the red-component of the image with the given name, and refer to it henceforth 
+                                          in the program by the given destination name. 
+
+flipHorizontal image-name dest-image-name: Flip an image horizontally to create a new image, referred to henceforth by the given destination name.
+
+flipVertical image-name dest-image-name: Flip an image vertically to create a new image, referred to henceforth by the given destination name.
+
+brighten increment image-name dest-image-name: Brighten the image by the given increment to create a new image, referred to henceforth by the given destination 
+                                               name. The increment may be positive (brightening) or negative (darkening)
+blur image-name dest-image-name: Blurs the image with the gaussian kernel
+
+sharpen image-name dest-image-name: Sharpens the image with the kernel given by the assignment to make the image have sharper edges
+
+greyscale image-name dest-image-name: greyscales the image through a color transformation, different from channel greyscaling
+
+sepia image-name dest-image-name: gives the image a sepia tone and makes the picture look like an old sepia photo
+
+q: Quits the program.
+
+
+
+Sample sequence of script commands: 
+
+#load rainbow.ppm and call it 'rainbow'
+load images/rainbow.ppm rainbow
+
+#load cat.jpg and call it 'cat'
+load images/cat.jpg cat
+
+#brighten rainbow by adding 20  
+brighten 20 rainbow rainbow-brighter 
+
+#flip rainbow horizontally
+flipHorizontal rainbow rainbow-horizontal
+
+#flip the horizontally flipped rainbow vertically
+flipVertical rainbow-horizontal rainbow-horizontal-vertical
+
+#create a greyscale using only the red component, as an image rainbow-greyscale
+red-component rainbow rainbow-greyscale
+
+#blur the cat image
+blur cat catBlur
+
+#sharpens the cat image
+sharpen cat catSharp
+
+#greyscales the cat image through color transformation
+greyscale cat catGS
+
+#gives the cat image a sepia filter or tone and makes it look like an old sepia photo
+sepia cat catSepia
+
+#save rainbow-brighter
+save images/rainbow-brighter.ppm rainbow-brighter
+
+#save rainbow-greyscale
+save images/rainbow-gs.ppm rainbow-greyscale
+
+#save catBlur
+save images/catBlur.jpg catBlur
+
+#overwrite rainbow with another file
+load images/upper.ppm rainbow

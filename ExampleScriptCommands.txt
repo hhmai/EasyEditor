@@ -1,0 +1,43 @@
+Sample sequence of script commands: 
+
+#load rainbow.ppm and call it 'rainbow'
+load images/rainbow.ppm rainbow
+
+#load cat.jpg and call it 'cat'
+load images/cat.jpg cat
+
+#brighten rainbow by adding 20  
+brighten 20 rainbow rainbow-brighter 
+
+#flip rainbow horizontally
+flipHorizontal rainbow rainbow-horizontal
+
+#flip the horizontally flipped rainbow vertically
+flipVertical rainbow-horizontal rainbow-horizontal-vertical
+
+#create a greyscale using only the red component, as an image rainbow-greyscale
+red-component rainbow rainbow-greyscale
+
+#blur the cat image
+blur cat catBlur
+
+#sharpens the cat image
+sharpen cat catSharp
+
+#greyscales the cat image through color transformation
+greyscale cat catGS
+
+#gives the cat image a sepia filter or tone and makes it look like an old sepia photo
+sepia cat catSepia
+
+#save rainbow-brighter
+save images/rainbow-brighter.ppm rainbow-brighter
+
+#save rainbow-greyscale
+save images/rainbow-gs.ppm rainbow-greyscale
+
+#save catBlur
+save images/catBlur.jpg catBlur
+
+#overwrite rainbow with another file
+load images/upper.ppm rainbow

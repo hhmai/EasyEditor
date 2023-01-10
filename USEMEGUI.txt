@@ -1,0 +1,8 @@
+HOW TO USE THE GUI PROGRAM:
+* Load an image with load button, navigate to image to load it
+* Press any button besides brighten or save to modify the image and view what it looks
+  like in the box below
+* Press brighen after you specify a brighten increment in integers then press the button
+  to view the brightened image
+* Press save to save an image to the navigated directory.
+* View the histogram at any time next to the image
